@@ -5,6 +5,7 @@ const BaileysProvider = require('@bot-whatsapp/provider/baileys')
 const MockAdapter = require('@bot-whatsapp/database/mock')
 
 const girarFlow = require('./src/flows/girarFlow')
+const tamarindoFlow = require('./src/flows/tamarindoFlow')
 
 const fs = require('fs')
 const path = require('path')
@@ -21,18 +22,22 @@ const menuFlow = addKeyword(EVENTS.WELCOME)
             switch(true) {
                 case opcion === '1':
                     return ctxFn.gotoFlow(girarFlow)
+                case opcion === '2':
+                    return ctxFn.gotoFlow(tamarindoFlow)
                 case opcion === '99':
                     return ctxFn.endFlow("Saliste del menú")
                 default:
                     return ctxFn.fallBack("Elige una opción válida")
+            }
         }
-    })
+    )
 
 const main = async () => {
     const adapterDB = new MockAdapter()
     const adapterFlow = createFlow([
         menuFlow,
         girarFlow,
+        tamarindoFlow,
     ])
     const adapterProvider = createProvider(BaileysProvider)
 

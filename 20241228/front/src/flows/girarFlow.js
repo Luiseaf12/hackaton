@@ -16,13 +16,13 @@ const girarFlow = addKeyword(EVENTS.WELCOME)
         //return ctxFn.endFlow(`Uy!! otro usuario a elegido *-${angulo}°*,\nasi que no giraré nada`)
         const axios = require('axios');
 
-        axios.post(`http://192.168.1.93:5000/servo/${angulo}`, {}, { timeout: 10000 })
+        axios.get(`http://192.168.1.93:5000/servo/${angulo}`)
         .catch(error => {
             console.error('Error al enviar la petición:', error);
           });
 
         console.log(`http://192.168.1.93:5000/servo/${angulo}`)
-        return ctxFn.endFlow(`Uy!! otro usuario a elegido *-${angulo}°*,\nasi que no giraré nada`);
+        return ctxFn.endFlow(`Movido satisfacoriamente a *-${angulo}°*`);
     }
 );
 
