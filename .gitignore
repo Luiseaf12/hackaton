@@ -1,0 +1,24 @@
+# ... otros patrones ...
+
+# Archivos específicos del proyecto
+.env
+baileys.log
+core.class.log
+queue.class.log
+node_modules/
+tmp/
+package-lock.json
+chatbot-recepcionista.json
+
+# Archivos de dependencias
+package-lock.json
+
+# Sesiones y datos temporales
+bot_sessions/
+# ... otros patrones ...
+# Archivos de dependencias
+package-lock.json
+*.png
+google.json
+bot.qr.png
+bot.qr.png

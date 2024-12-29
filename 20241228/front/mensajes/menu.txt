@@ -1,0 +1,5 @@
+Bienvenido *HUMANO*
+Elige una opción del menú
+*1.-* Girar 🔄
+*2.-* Tamarindo 🫔
+*99.-* Salir 🚪
